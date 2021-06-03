@@ -1,0 +1,34 @@
+# The west manifest file (west.yml) for MCUXpresso SDK multicore middleware
+#
+# The per-workspace west configuration file, ${workspace_path}/.west/config,
+# specifies the path of the project containing this manifest file, the
+# path is relative to the workspace location ${workspace_path}.
+#
+#     [manifest]
+#     path = core
+#
+# See the west documentation for more information:
+#
+# https://docs.zephyrproject.org/latest/guides/west/index.html
+
+manifest:
+  
+  remotes:
+    - name: nxpmicro
+      url-base: https://github.com/NXPmicro
+
+  defaults:
+    remote: nxpmicro
+
+  projects:
+    - name: rpmsg-lite.git
+      path: rpmsg_lite
+      url:  https://github.com/NXPmicro/rpmsg-lite.git
+      revision: v3.1.1
+    - name: erpc.git
+      path: erpc
+      url:  https://github.com/EmbeddedRPC/erpc.git
+      revision: 1.8.0
+
+  self:
+    path: core
