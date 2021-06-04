@@ -1,0 +1,7 @@
+
+Config block notes:
+- need peripheral number and perhaps address in peripheral dict
+- periph and regions need access permissions based domain
+   - may be optional
+- shared mem regions need addr ranges
+
