@@ -8,7 +8,8 @@ target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/erpc/erpc_c/port/erpc_setup_extensions_freertos.cpp
 )
 
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/erpc/erpc_c/port
 )
 

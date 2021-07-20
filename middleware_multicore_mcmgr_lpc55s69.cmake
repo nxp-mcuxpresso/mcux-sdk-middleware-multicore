@@ -6,7 +6,8 @@ target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/mcmgr/src/mcmgr_internal_core_api_lpc55s69.c
 )
 
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PRIVATE
 )
 
 
