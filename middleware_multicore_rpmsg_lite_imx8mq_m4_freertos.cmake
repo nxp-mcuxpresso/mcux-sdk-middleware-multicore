@@ -11,5 +11,4 @@ target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
 )
 
 
-include(middleware_multicore_rpmsg_lite)
 include(middleware_freertos-kernel_MIMX8MQ6)

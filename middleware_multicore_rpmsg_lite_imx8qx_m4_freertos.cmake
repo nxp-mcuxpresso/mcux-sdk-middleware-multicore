@@ -11,5 +11,5 @@ target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
 )
 
 
-include(middleware_multicore_rpmsg_lite)
 include(middleware_freertos-kernel_heap_4)
+include(middleware_multicore_rpmsg_lite_MIMX8QX6)

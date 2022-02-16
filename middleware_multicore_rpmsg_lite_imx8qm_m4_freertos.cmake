@@ -10,6 +10,12 @@ target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/include/platform/imx8qm_m4
 )
 
+#OR Logic component
+if(${MCUX_DEVICE} STREQUAL "MIMX8QM6_cm4_core0")
+    include(middleware_multicore_rpmsg_lite_MIMX8QM6_cm4_core0)
+endif()
+if(${MCUX_DEVICE} STREQUAL "MIMX8QM6_cm4_core1")
+    include(middleware_multicore_rpmsg_lite_MIMX8QM6_cm4_core1)
+endif()
 
-include(middleware_multicore_rpmsg_lite)
 include(middleware_freertos-kernel_heap_4)

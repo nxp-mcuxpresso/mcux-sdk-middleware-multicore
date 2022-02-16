@@ -10,6 +10,12 @@ target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/include/platform/lpc5411x
 )
 
+#OR Logic component
+if(${MCUX_DEVICE} STREQUAL "LPC54114_cm0plus")
+    include(middleware_multicore_rpmsg_lite_LPC54114_cm0plus)
+endif()
+if(${MCUX_DEVICE} STREQUAL "LPC54114_cm4")
+    include(middleware_multicore_rpmsg_lite_LPC54114_cm4)
+endif()
 
 include(middleware_freertos-kernel_heap_3)
-include(middleware_multicore_rpmsg_lite)
