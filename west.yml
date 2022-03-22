@@ -28,7 +28,7 @@ manifest:
     - name: erpc.git
       path: multicore/erpc
       url:  https://github.com/EmbeddedRPC/erpc.git
-      revision: 1.8.1
+      revision: ab306fc1a64e12769ee52819b85189374e639588
 
   self:
     path: multicore
