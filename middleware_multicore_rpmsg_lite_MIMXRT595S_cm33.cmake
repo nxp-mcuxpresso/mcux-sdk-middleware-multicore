@@ -14,6 +14,9 @@ target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
 )
 
 #OR Logic component
+if(CONFIG_USE_middleware_multicore_rpmsg_lite_bm) 
+    include(middleware_multicore_rpmsg_lite_bm)
+endif()
 if(CONFIG_USE_middleware_multicore_rpmsg_lite_freertos) 
     include(middleware_multicore_rpmsg_lite_freertos)
 endif()

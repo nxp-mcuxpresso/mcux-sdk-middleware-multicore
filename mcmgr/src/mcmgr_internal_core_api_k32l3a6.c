@@ -166,6 +166,7 @@ mcmgr_status_t mcmgr_stop_core_internal(mcmgr_core_t coreNum)
 
     MU_HardwareResetOtherCore(MUA, false, true, kMU_CoreBootFromDflashBase);
 #endif
+    s_mcmgrCoresContext[coreNum].state = kMCMGR_ResetCoreState;
     return kStatus_MCMGR_Success;
 }
 

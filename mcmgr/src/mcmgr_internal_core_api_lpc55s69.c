@@ -106,6 +106,7 @@ mcmgr_status_t mcmgr_stop_core_internal(mcmgr_core_t coreNum)
 
     /* hold in reset and disable clock */
     SYSCON->CPUCTRL = (temp | SYSCON_CPUCTRL_CPU1RSTEN_MASK) & (~SYSCON_CPUCTRL_CPU1CLKEN_MASK);
+    s_mcmgrCoresContext[coreNum].state = kMCMGR_ResetCoreState;
     return kStatus_MCMGR_Success;
 }
 
