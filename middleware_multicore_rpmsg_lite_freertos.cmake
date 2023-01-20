@@ -54,6 +54,30 @@ target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
 )
 endif()
 
+if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1173_cm4)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_freertos.c
+)
+endif()
+
+if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1173_cm4)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/rpmsg_queue.c
+)
+endif()
+
+if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1173_cm7)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_freertos.c
+)
+endif()
+
+if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1173_cm7)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/rpmsg_queue.c
+)
+endif()
+
 if(CONFIG_USE_middleware_freertos-kernel_MIMX8MN6)
 target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_freertos.c
@@ -109,6 +133,54 @@ target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
 endif()
 
 if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1176_cm7)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/rpmsg_queue.c
+)
+endif()
+
+if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1175_cm4)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_freertos.c
+)
+endif()
+
+if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1175_cm4)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/rpmsg_queue.c
+)
+endif()
+
+if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1175_cm7)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_freertos.c
+)
+endif()
+
+if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1175_cm7)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/rpmsg_queue.c
+)
+endif()
+
+if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1165_cm4)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_freertos.c
+)
+endif()
+
+if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1165_cm4)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/rpmsg_queue.c
+)
+endif()
+
+if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1165_cm7)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_freertos.c
+)
+endif()
+
+if(CONFIG_USE_middleware_freertos-kernel_MIMXRT1165_cm7)
 target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/rpmsg_queue.c
 )
