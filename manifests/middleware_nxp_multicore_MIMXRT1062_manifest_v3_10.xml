@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ksdk:manifest xmlns:ksdk="http://nxp.com/ksdk/2.0/ksdk_manifest_v3.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="SDK_2.x_middleware_nxp_multicore_MIMXRT1062_manifest_v3_10" name="multicore" brief="Multicore Software Development Kit" format_version="3.10" api_version="2.0.0" xsi:schemaLocation="http://nxp.com/ksdk/2.0/ksdk_manifest_v3.0.xsd http://nxp.com/mcuxpresso/sdk/sdk_manifest_v3.10.xsd">
-  <!--Timestamp (UTC): 2023-01-09 15:35:19.075581-->
-  <!--This manifest is generated based on sdk repo commit: dcc319a0105d6a9ebec0bc625dd7aae64718cd3d-->
+  <!--Timestamp (UTC): 2023-03-27 10:46:26.056423-->
+  <!--This manifest is generated based on sdk repo commit: 7a3cf97dd3582e3ee8a98ede814ff1f2a45ea519-->
   <externalDefinitions>
     <definition extID="MIMXRT1062xxxxA"/>
-    <definition extID="MIMXRT1062xxxxB"/>
     <definition extID="armgcc"/>
   </externalDefinitions>
   <ksdk id="MCUXpressoSDK2130_middleware_nxp_multicore_MIMXRT1062_manifest_v3_10" name="MCUXpressoSDK2130_middleware_nxp_multicore_MIMXRT1062_manifest_v3_10" version="2.13.0"/>
   <components>
-    <component id="middleware.multicore.MIMXRT1062" name="multicore middleware" brief="Multicore SDK" version="2.13.0" full_name="Multicore Software Development Kit" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" user_visible="true" type="other" package_base_path=".././" project_base_path="multicore">
+    <component id="middleware.multicore.MIMXRT1062" name="multicore middleware" brief="Multicore SDK" version="2.13.0" full_name="Multicore Software Development Kit" devices="MIMXRT1062xxxxA" user_visible="true" type="other" package_base_path=".././" project_base_path="multicore">
       <source relative_path="./" type="doc">
         <files mask="readme.txt" hidden="true"/>
         <files mask="ChangeLogKSDK.txt" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.MIMXRT1062" name="eRPC" brief="eRPC" version="1.10.0" full_name="Embedded Remote Procedure Call" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.MIMXRT1062" name="eRPC" brief="eRPC" version="1.10.0" full_name="Embedded Remote Procedure Call" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <source relative_path="./erpc" project_relative_path="aux" type="project">
         <files mask=".cproject" hidden="true"/>
         <files mask=".project" hidden="true"/>
@@ -2048,7 +2047,7 @@
         <files mask="erpcsniffer" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.common.MIMXRT1062" name="eRPC_common" brief="eRPC" version="1.10.0" full_name="Embedded Remote Procedure Call" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.common.MIMXRT1062" name="eRPC_common" brief="eRPC" version="1.10.0" full_name="Embedded Remote Procedure Call" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include">
         <files mask="erpc_version.h"/>
         <files mask="erpc_common.h"/>
@@ -2091,7 +2090,7 @@
         <include_path relative_path="./erpc/erpc_c" project_relative_path="./" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.doc.MIMXRT1062" name="eRPC_port_stdlib" brief="erpc_doc" version="1.10.0" full_name="eRPC doc" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="false" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.doc.MIMXRT1062" name="eRPC_port_stdlib" brief="erpc_doc" version="1.10.0" full_name="eRPC doc" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="false" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2119,7 +2118,7 @@
         <files mask="middleware_multicore_erpc_doc_MIMXRT1062.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_arbitrator.MIMXRT1062" name="eRPC_arbitrator" brief="eRPC_arbitrator" version="1.10.0" full_name="eRPC arbitrator" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_arbitrator.MIMXRT1062" name="eRPC_arbitrator" brief="eRPC_arbitrator" version="1.10.0" full_name="eRPC arbitrator" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2159,7 +2158,7 @@
         <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_client.MIMXRT1062" name="eRPC_client" brief="eRPC_client" version="1.10.0" full_name="eRPC client" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_client.MIMXRT1062" name="eRPC_client" brief="eRPC_client" version="1.10.0" full_name="eRPC client" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2180,7 +2179,7 @@
         <include_path relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_dspi_master_c_wrapper.MIMXRT1062" name="eRPC_dspi_master_c_wrapper" brief="eRPC_dspi_master_c_wrapper" version="1.10.0" full_name="eRPC DSPI master C Wrapper" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_dspi_master_c_wrapper.MIMXRT1062" name="eRPC_dspi_master_c_wrapper" brief="eRPC_dspi_master_c_wrapper" version="1.10.0" full_name="eRPC DSPI master C Wrapper" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2188,7 +2187,7 @@
         <files mask="erpc_setup_dspi_master.cpp"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_dspi_master_transport.MIMXRT1062" name="eRPC_dspi_master_transport" brief="eRPC_dspi_master_transport" version="1.10.0" full_name="eRPC DSPI master transport layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_dspi_master_transport.MIMXRT1062" name="eRPC_dspi_master_transport" brief="eRPC_dspi_master_transport" version="1.10.0" full_name="eRPC DSPI master transport layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2212,7 +2211,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_dspi_slave_c_wrapper.MIMXRT1062" name="eRPC_dspi_slave_c_wrapper" brief="eRPC_dspi_slave_c_wrapper" version="1.10.0" full_name="eRPC DSPI slave C Wrapper" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_dspi_slave_c_wrapper.MIMXRT1062" name="eRPC_dspi_slave_c_wrapper" brief="eRPC_dspi_slave_c_wrapper" version="1.10.0" full_name="eRPC DSPI slave C Wrapper" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2220,7 +2219,7 @@
         <files mask="erpc_setup_dspi_slave.cpp"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_dspi_slave_transport.MIMXRT1062" name="eRPC_dspi_slave_transport" brief="eRPC_dspi_slave_transport" version="1.10.0" full_name="eRPC DSPI slave transport layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_dspi_slave_transport.MIMXRT1062" name="eRPC_dspi_slave_transport" brief="eRPC_dspi_slave_transport" version="1.10.0" full_name="eRPC DSPI slave transport layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2244,7 +2243,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_i2c_slave_c_wrapper.MIMXRT1062" name="eRPC_i2c_slave_c_wrapper" brief="eRPC_i2c_slave_c_wrapper" version="1.10.0" full_name="eRPC I2C slave C Wrapper" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_i2c_slave_c_wrapper.MIMXRT1062" name="eRPC_i2c_slave_c_wrapper" brief="eRPC_i2c_slave_c_wrapper" version="1.10.0" full_name="eRPC I2C slave C Wrapper" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2252,7 +2251,7 @@
         <files mask="erpc_setup_i2c_slave.cpp"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_i2c_slave_transport.MIMXRT1062" name="eRPC_i2c_slave_transport" brief="eRPC_i2c_slave_transport" version="1.10.0" full_name="eRPC I2C slave transport layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_i2c_slave_transport.MIMXRT1062" name="eRPC_i2c_slave_transport" brief="eRPC_i2c_slave_transport" version="1.10.0" full_name="eRPC I2C slave transport layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2276,7 +2275,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_mu_c_wrapper.MIMXRT1062" name="eRPC_mu_c_wrapper" brief="eRPC_mu_c_wrapper" version="1.10.0" full_name="eRPC Messaging Unit C Wrapper" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_mu_c_wrapper.MIMXRT1062" name="eRPC_mu_c_wrapper" brief="eRPC_mu_c_wrapper" version="1.10.0" full_name="eRPC Messaging Unit C Wrapper" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2284,7 +2283,7 @@
         <files mask="erpc_setup_mu.cpp"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_mu_rtos_transport.MIMXRT1062" name="eRPC_mu_rtos_transport" brief="eRPC_mu_rtos_transport" version="1.10.0" full_name="eRPC MU RTOS transport layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_mu_rtos_transport.MIMXRT1062" name="eRPC_mu_rtos_transport" brief="eRPC_mu_rtos_transport" version="1.10.0" full_name="eRPC MU RTOS transport layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2308,7 +2307,7 @@
         <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_mu_transport.MIMXRT1062" name="eRPC_mu_transport" brief="eRPC_mu_transport" version="1.10.0" full_name="eRPC MU transport layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_mu_transport.MIMXRT1062" name="eRPC_mu_transport" brief="eRPC_mu_transport" version="1.10.0" full_name="eRPC MU transport layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2325,7 +2324,7 @@
         <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_port_freertos.MIMXRT1062" name="eRPC_port_freertos" brief="eRPC_port_freertos" version="1.10.0" full_name="eRPC FreeRTOS port layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_port_freertos.MIMXRT1062" name="eRPC_port_freertos" brief="eRPC_port_freertos" version="1.10.0" full_name="eRPC FreeRTOS port layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2344,7 +2343,7 @@
         <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_port_stdlib.MIMXRT1062" name="eRPC_port_stdlib" brief="eRPC_port_stdlib" version="1.10.0" full_name="eRPC stdlib port layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_port_stdlib.MIMXRT1062" name="eRPC_port_stdlib" brief="eRPC_port_stdlib" version="1.10.0" full_name="eRPC stdlib port layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2362,7 +2361,7 @@
         <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_master_c_wrapper.MIMXRT1062" name="eRPC_rpmsg_lite_master_c_wrapper" brief="eRPC_rpmsg_lite_master_c_wrapper" version="1.10.0" full_name="eRPC RPMsg-Lite master C Wrapper" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_master_c_wrapper.MIMXRT1062" name="eRPC_rpmsg_lite_master_c_wrapper" brief="eRPC_rpmsg_lite_master_c_wrapper" version="1.10.0" full_name="eRPC RPMsg-Lite master C Wrapper" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2370,7 +2369,7 @@
         <files mask="erpc_setup_rpmsg_lite_master.cpp"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_remote_c_wrapper.MIMXRT1062" name="eRPC_rpmsg_lite_remote_c_wrapper" brief="eRPC_rpmsg_lite_remote_c_wrapper" version="1.10.0" full_name="eRPC RPMsg-Lite remote C Wrapper" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_remote_c_wrapper.MIMXRT1062" name="eRPC_rpmsg_lite_remote_c_wrapper" brief="eRPC_rpmsg_lite_remote_c_wrapper" version="1.10.0" full_name="eRPC RPMsg-Lite remote C Wrapper" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2378,7 +2377,7 @@
         <files mask="erpc_setup_rpmsg_lite_remote.cpp"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_master_c_wrapper.MIMXRT1062" name="eRPC_rpmsg_lite_rtos_master_c_wrapper" brief="eRPC_rpmsg_lite_rtos_master_c_wrapper" version="1.10.0" full_name="eRPC RPMsg-Lite RTOS master C Wrapper" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_master_c_wrapper.MIMXRT1062" name="eRPC_rpmsg_lite_rtos_master_c_wrapper" brief="eRPC_rpmsg_lite_rtos_master_c_wrapper" version="1.10.0" full_name="eRPC RPMsg-Lite RTOS master C Wrapper" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2386,7 +2385,7 @@
         <files mask="erpc_setup_rpmsg_lite_rtos_master.cpp"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_remote_c_wrapper.MIMXRT1062" name="eRPC_rpmsg_lite_rtos_remote_c_wrapper" brief="eRPC_rpmsg_lite_rtos_remote_c_wrapper" version="1.10.0" full_name="eRPC RPMsg-Lite RTOS remote C Wrapper" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_remote_c_wrapper.MIMXRT1062" name="eRPC_rpmsg_lite_rtos_remote_c_wrapper" brief="eRPC_rpmsg_lite_rtos_remote_c_wrapper" version="1.10.0" full_name="eRPC RPMsg-Lite RTOS remote C Wrapper" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2394,7 +2393,7 @@
         <files mask="erpc_setup_rpmsg_lite_rtos_remote.cpp"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_transport.MIMXRT1062" name="eRPC_rpmsg_lite_rtos_transport" brief="eRPC_rpmsg_lite_rtos_transport" version="1.10.0" full_name="eRPC RPMsg-Lite RTOS transport layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_transport.MIMXRT1062" name="eRPC_rpmsg_lite_rtos_transport" brief="eRPC_rpmsg_lite_rtos_transport" version="1.10.0" full_name="eRPC RPMsg-Lite RTOS transport layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2412,7 +2411,7 @@
         <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_transport.MIMXRT1062" name="eRPC_rpmsg_lite_transport" brief="eRPC_rpmsg_lite_transport" version="1.10.0" full_name="eRPC RPMsg-Lite transport layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_transport.MIMXRT1062" name="eRPC_rpmsg_lite_transport" brief="eRPC_rpmsg_lite_transport" version="1.10.0" full_name="eRPC RPMsg-Lite transport layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2434,7 +2433,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_tty_rtos_remote_c_wrapper.MIMXRT1062" name="eRPC_rpmsg_tty_rtos_remote_c_wrapper" brief="eRPC_rpmsg_tty_rtos_remote_c_wrapper" version="1.10.0" full_name="eRPC RPMsg-Lite remote TTY RTOS C Wrapper" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_tty_rtos_remote_c_wrapper.MIMXRT1062" name="eRPC_rpmsg_tty_rtos_remote_c_wrapper" brief="eRPC_rpmsg_tty_rtos_remote_c_wrapper" version="1.10.0" full_name="eRPC RPMsg-Lite remote TTY RTOS C Wrapper" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2442,7 +2441,7 @@
         <files mask="erpc_setup_rpmsg_tty_rtos_remote.cpp"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_tty_rtos_transport.MIMXRT1062" name="eRPC_rpmsg_tty_rtos_transport" brief="eRPC_rpmsg_tty_rtos_transport" version="1.10.0" full_name="eRPC RPMsg-Lite TTY RTOS transport layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_tty_rtos_transport.MIMXRT1062" name="eRPC_rpmsg_tty_rtos_transport" brief="eRPC_rpmsg_tty_rtos_transport" version="1.10.0" full_name="eRPC RPMsg-Lite TTY RTOS transport layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2474,7 +2473,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_server.MIMXRT1062" name="eRPC_server" brief="eRPC_server" version="1.10.0" full_name="eRPC server" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_server.MIMXRT1062" name="eRPC_server" brief="eRPC_server" version="1.10.0" full_name="eRPC server" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2500,7 +2499,7 @@
         <include_path relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_spi_master_c_wrapper.MIMXRT1062" name="eRPC_spi_master_c_wrapper" brief="eRPC_spi_master_c_wrapper" version="1.10.0" full_name="eRPC SPI master C Wrapper" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_spi_master_c_wrapper.MIMXRT1062" name="eRPC_spi_master_c_wrapper" brief="eRPC_spi_master_c_wrapper" version="1.10.0" full_name="eRPC SPI master C Wrapper" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2508,7 +2507,7 @@
         <files mask="erpc_setup_spi_master.cpp"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_spi_master_transport.MIMXRT1062" name="eRPC_spi_master_transport" brief="eRPC_spi_master_transport" version="1.10.0" full_name="eRPC SPI master transport layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_spi_master_transport.MIMXRT1062" name="eRPC_spi_master_transport" brief="eRPC_spi_master_transport" version="1.10.0" full_name="eRPC SPI master transport layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2532,7 +2531,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_spi_slave_c_wrapper.MIMXRT1062" name="eRPC_spi_slave_c_wrapper" brief="eRPC_spi_slave_c_wrapper" version="1.10.0" full_name="eRPC SPI slave C Wrapper" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_spi_slave_c_wrapper.MIMXRT1062" name="eRPC_spi_slave_c_wrapper" brief="eRPC_spi_slave_c_wrapper" version="1.10.0" full_name="eRPC SPI slave C Wrapper" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2540,7 +2539,7 @@
         <files mask="erpc_setup_spi_slave.cpp"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_spi_slave_transport.MIMXRT1062" name="eRPC_spi_slave_transport" brief="eRPC_spi_slave_transport" version="1.10.0" full_name="eRPC SPI slave transport layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_spi_slave_transport.MIMXRT1062" name="eRPC_spi_slave_transport" brief="eRPC_spi_slave_transport" version="1.10.0" full_name="eRPC SPI slave transport layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
@@ -2564,7 +2563,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_uart_cmsis_transport.MIMXRT1062" name="eRPC_uart_cmsis_transport" brief="eRPC_uart_cmsis_transport" version="1.10.0" full_name="eRPC UART CMSIS transport layer" devices="MIMXRT1062xxxxA MIMXRT1062xxxxB" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_uart_cmsis_transport.MIMXRT1062" name="eRPC_uart_cmsis_transport" brief="eRPC_uart_cmsis_transport" version="1.10.0" full_name="eRPC UART CMSIS transport layer" devices="MIMXRT1062xxxxA" category="Multicore/eRPC" user_visible="true" type="other" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.MIMXRT1062"/>
       </dependencies>
