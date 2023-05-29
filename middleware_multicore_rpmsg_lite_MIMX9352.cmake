@@ -12,3 +12,7 @@ target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
 target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/include
 )
+
+if(CONFIG_USE_middleware_multicore_rpmsg_lite_zephyr)
+    include(middleware_multicore_rpmsg_lite_zephyr)
+endif()
