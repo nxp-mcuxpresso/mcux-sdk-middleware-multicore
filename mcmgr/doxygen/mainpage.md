@@ -42,6 +42,8 @@ void main()
 }
 ~~~~~
 
+Some platforms allow stopping and re-starting the secondary core application again, using the MCMGR_StopCore / MCMGR_StartCore API calls. It is necessary to ensure the initially loaded image is not corrupted before re-starting, especially if it deals with the RAM target. Cache coherence has to be considered/ensured as well.
+
 Another important MCMGR feature is the ability for remote core monitoring and handling of events such as reset, exception, and application events.
 Application-specific callback functions for events are registered by the MCMGR_RegisterEvent() API. Triggering these events is done using the MCMGR_TriggerEvent() API.
 mcmgr_event_type_t enums all possible event types.
@@ -134,4 +136,7 @@ This table summarizes revisions of this document.
 |4.0.2          | 09/2018 | Align porting layers to the updated MCUXpressoSDK feature files      |
 |4.0.3          | 05/2019 | Minor code adjustments based on static analysis tool findings      |
 |4.1.0          | 11/2019 | Code adjustments to address MISRA C-2012 Rules      |
+|4.1.2          | 04/2022 | Update mcmgr_stop_core_internal() implementations to set core state to kMCMGR_ResetCoreState      |
+|4.1.3          | 10/2022 | mcmgr_mu_internal.c code adaptation to new supported SoCs     |
+|4.1.4          | 04/2023 | Avoid calling tx isr callbacks when respective Messaging Unit Transmit Interrupt Enable flag is not set in the CR/TCR register <p> Messaging Unit RX and status registers are cleared after the initialization     |
 
