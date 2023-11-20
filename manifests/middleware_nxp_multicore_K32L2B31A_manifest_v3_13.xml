@@ -5,9 +5,9 @@
     <definition extID="K32L2B31xxxxA"/>
     <definition extID="armgcc"/>
   </externalDefinitions>
-  <ksdk id="MCUXpressoSDK2140_middleware_nxp_multicore_K32L2B31A_manifest_v3_13" name="MCUXpressoSDK2140_middleware_nxp_multicore_K32L2B31A_manifest_v3_13" version="2.14.0"/>
+  <ksdk id="MCUXpressoSDK2140_middleware_nxp_multicore_K32L2B31A_manifest_v3_13" name="MCUXpressoSDK2140_middleware_nxp_multicore_K32L2B31A_manifest_v3_13" version="2.14.0" revision="2.14.0"/>
   <components>
-    <component id="middleware.multicore.K32L2B31A" name="multicore middleware" brief="Multicore SDK" version="2.14.0" full_name="Multicore Software Development Kit" devices="K32L2B31xxxxA" category="Multicore/MulticoreSDK" user_visible="false" type="middleware" package_base_path="../middleware/multicore" project_base_path="multicore">
+    <component id="middleware.multicore.K32L2B31A" name="multicore middleware" brief="Multicore SDK" version="2.14.0" full_name="Multicore Software Development Kit" devices="K32L2B31xxxxA" category="Multicore/MulticoreSDK" user_visible="false" type="middleware" package_base_path=".././" project_base_path="multicore">
       <source relative_path="./" type="doc">
         <files mask="readme.txt" hidden="true"/>
         <files mask="ChangeLogKSDK.txt" hidden="true"/>
@@ -16,13 +16,13 @@
         <files mask="middleware_multicore.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.common.K32L2B31A" name="eRPC_common" brief="eRPC" version="1.11.0" full_name="Embedded Remote Procedure Call" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include">
+    <component id="middleware.multicore.erpc.common.K32L2B31A" name="eRPC_common" brief="eRPC" version="1.11.0" full_name="Embedded Remote Procedure Call" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include">
         <files mask="erpc_version.h"/>
         <files mask="erpc_common.h"/>
         <files mask="erpc_pre_post_action.h"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_codec.hpp"/>
         <files mask="erpc_basic_codec.hpp"/>
         <files mask="erpc_transport.hpp"/>
@@ -32,18 +32,18 @@
         <files mask="erpc_crc16.hpp"/>
         <files mask="erpc_client_server_common.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="c_include">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="c_include">
         <files mask="erpc_transport_setup.h"/>
         <files mask="erpc_mbf_setup.h"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_basic_codec.cpp"/>
         <files mask="erpc_message_buffer.cpp"/>
         <files mask="erpc_message_loggers.cpp"/>
         <files mask="erpc_crc16.cpp"/>
         <files mask="erpc_pre_post_action.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="c_include">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include">
         <files mask="erpc_setup_extensions.h"/>
         <files mask="erpc_endianness_agnostic_example.h"/>
         <files mask="erpc_endianness_undefined.h"/>
@@ -52,394 +52,394 @@
         <files mask="middleware_multicore_erpc_common.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c" project_relative_path="./" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c" project_relative_path="./" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_arbitrator.K32L2B31A" name="eRPC_arbitrator" brief="eRPC_arbitrator" version="1.11.0" full_name="eRPC arbitrator" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_arbitrator.K32L2B31A" name="eRPC_arbitrator" brief="eRPC_arbitrator" version="1.11.0" full_name="eRPC arbitrator" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_arbitrated_client_manager.hpp"/>
         <files mask="erpc_simple_server.hpp"/>
         <files mask="erpc_server.hpp"/>
         <files mask="erpc_transport_arbitrator.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_arbitrated_client_manager.cpp"/>
         <files mask="erpc_client_manager.cpp"/>
         <files mask="erpc_simple_server.cpp"/>
         <files mask="erpc_server.cpp"/>
         <files mask="erpc_transport_arbitrator.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include">
         <files mask="erpc_client_manager.h"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="c_include">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="c_include">
         <files mask="erpc_arbitrated_client_setup.h"/>
         <files mask="erpc_server_setup.h"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_arbitrated_client_setup.cpp"/>
         <files mask="erpc_server_setup.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="c_include">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include">
         <files mask="erpc_threading.h"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="src">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="port" type="src">
         <files mask="erpc_threading_freertos.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_arbitrator.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_client.K32L2B31A" name="eRPC_client" brief="eRPC_client" version="1.11.0" full_name="eRPC client" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_client.K32L2B31A" name="eRPC_client" brief="eRPC_client" version="1.11.0" full_name="eRPC client" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include">
         <files mask="erpc_client_manager.h"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_client_manager.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="c_include">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="c_include">
         <files mask="erpc_client_setup.h"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_client_setup.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_client.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_server.K32L2B31A" name="eRPC_server" brief="eRPC_server" version="1.11.0" full_name="eRPC server" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_server.K32L2B31A" name="eRPC_server" brief="eRPC_server" version="1.11.0" full_name="eRPC server" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_simple_server.hpp"/>
         <files mask="erpc_server.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_simple_server.cpp"/>
         <files mask="erpc_server.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="c_include">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="c_include">
         <files mask="erpc_server_setup.h"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_server_setup.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_server.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_tty_rtos_remote_c_wrapper.K32L2B31A" name="eRPC_rpmsg_tty_rtos_remote_c_wrapper" brief="eRPC_rpmsg_tty_rtos_remote_c_wrapper" version="1.11.0" full_name="eRPC RPMsg-Lite remote TTY RTOS C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_tty_rtos_remote_c_wrapper.K32L2B31A" name="eRPC_rpmsg_tty_rtos_remote_c_wrapper" brief="eRPC_rpmsg_tty_rtos_remote_c_wrapper" version="1.11.0" full_name="eRPC RPMsg-Lite remote TTY RTOS C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_rpmsg_tty_rtos_remote.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_tty_rtos_remote_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_mu_c_wrapper.K32L2B31A" name="eRPC_mu_c_wrapper" brief="eRPC_mu_c_wrapper" version="1.11.0" full_name="eRPC Messaging Unit C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_mu_c_wrapper.K32L2B31A" name="eRPC_mu_c_wrapper" brief="eRPC_mu_c_wrapper" version="1.11.0" full_name="eRPC Messaging Unit C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mu.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_mu_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_master_c_wrapper.K32L2B31A" name="eRPC_rpmsg_lite_master_c_wrapper" brief="eRPC_rpmsg_lite_master_c_wrapper" version="1.11.0" full_name="eRPC RPMsg-Lite master C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_master_c_wrapper.K32L2B31A" name="eRPC_rpmsg_lite_master_c_wrapper" brief="eRPC_rpmsg_lite_master_c_wrapper" version="1.11.0" full_name="eRPC RPMsg-Lite master C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_rpmsg_lite_master.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_lite_master_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_remote_c_wrapper.K32L2B31A" name="eRPC_rpmsg_lite_remote_c_wrapper" brief="eRPC_rpmsg_lite_remote_c_wrapper" version="1.11.0" full_name="eRPC RPMsg-Lite remote C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_remote_c_wrapper.K32L2B31A" name="eRPC_rpmsg_lite_remote_c_wrapper" brief="eRPC_rpmsg_lite_remote_c_wrapper" version="1.11.0" full_name="eRPC RPMsg-Lite remote C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_rpmsg_lite_remote.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_lite_remote_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_master_c_wrapper.K32L2B31A" name="eRPC_rpmsg_lite_rtos_master_c_wrapper" brief="eRPC_rpmsg_lite_rtos_master_c_wrapper" version="1.11.0" full_name="eRPC RPMsg-Lite RTOS master C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_master_c_wrapper.K32L2B31A" name="eRPC_rpmsg_lite_rtos_master_c_wrapper" brief="eRPC_rpmsg_lite_rtos_master_c_wrapper" version="1.11.0" full_name="eRPC RPMsg-Lite RTOS master C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_rpmsg_lite_rtos_master.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_lite_rtos_master_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_remote_c_wrapper.K32L2B31A" name="eRPC_rpmsg_lite_rtos_remote_c_wrapper" brief="eRPC_rpmsg_lite_rtos_remote_c_wrapper" version="1.11.0" full_name="eRPC RPMsg-Lite RTOS remote C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_remote_c_wrapper.K32L2B31A" name="eRPC_rpmsg_lite_rtos_remote_c_wrapper" brief="eRPC_rpmsg_lite_rtos_remote_c_wrapper" version="1.11.0" full_name="eRPC RPMsg-Lite RTOS remote C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_rpmsg_lite_rtos_remote.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_lite_rtos_remote_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_dspi_master_c_wrapper.K32L2B31A" name="eRPC_dspi_master_c_wrapper" brief="eRPC_dspi_master_c_wrapper" version="1.11.0" full_name="eRPC DSPI master C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_dspi_master_c_wrapper.K32L2B31A" name="eRPC_dspi_master_c_wrapper" brief="eRPC_dspi_master_c_wrapper" version="1.11.0" full_name="eRPC DSPI master C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_dspi_master.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_dspi_master_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_dspi_slave_c_wrapper.K32L2B31A" name="eRPC_dspi_slave_c_wrapper" brief="eRPC_dspi_slave_c_wrapper" version="1.11.0" full_name="eRPC DSPI slave C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_dspi_slave_c_wrapper.K32L2B31A" name="eRPC_dspi_slave_c_wrapper" brief="eRPC_dspi_slave_c_wrapper" version="1.11.0" full_name="eRPC DSPI slave C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_dspi_slave.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_dspi_slave_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_spi_master_c_wrapper.K32L2B31A" name="eRPC_spi_master_c_wrapper" brief="eRPC_spi_master_c_wrapper" version="1.11.0" full_name="eRPC SPI master C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_spi_master_c_wrapper.K32L2B31A" name="eRPC_spi_master_c_wrapper" brief="eRPC_spi_master_c_wrapper" version="1.11.0" full_name="eRPC SPI master C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_spi_master.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_spi_master_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_spi_slave_c_wrapper.K32L2B31A" name="eRPC_spi_slave_c_wrapper" brief="eRPC_spi_slave_c_wrapper" version="1.11.0" full_name="eRPC SPI slave C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_spi_slave_c_wrapper.K32L2B31A" name="eRPC_spi_slave_c_wrapper" brief="eRPC_spi_slave_c_wrapper" version="1.11.0" full_name="eRPC SPI slave C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_spi_slave.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_spi_slave_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_lpspi_slave_c_wrapper.K32L2B31A" name="eRPC_lpspi_slave_c_wrapper" brief="eRPC_lpspi_slave_c_wrapper" version="1.9.1" full_name="eRPC LPSPI slave C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_lpspi_slave_c_wrapper.K32L2B31A" name="eRPC_lpspi_slave_c_wrapper" brief="eRPC_lpspi_slave_c_wrapper" version="1.9.1" full_name="eRPC LPSPI slave C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_lpspi_slave.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_lpspi_slave_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_i2c_slave_c_wrapper.K32L2B31A" name="eRPC_i2c_slave_c_wrapper" brief="eRPC_i2c_slave_c_wrapper" version="1.11.0" full_name="eRPC I2C slave C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_i2c_slave_c_wrapper.K32L2B31A" name="eRPC_i2c_slave_c_wrapper" brief="eRPC_i2c_slave_c_wrapper" version="1.11.0" full_name="eRPC I2C slave C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_i2c_slave.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_i2c_slave_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_lpi2c_slave_c_wrapper.K32L2B31A" name="eRPC_lpi2c_slave_c_wrapper" brief="eRPC_lpi2c_slave_c_wrapper" version="1.9.1" full_name="eRPC LPI2C slave C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_lpi2c_slave_c_wrapper.K32L2B31A" name="eRPC_lpi2c_slave_c_wrapper" brief="eRPC_lpi2c_slave_c_wrapper" version="1.9.1" full_name="eRPC LPI2C slave C Wrapper" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_lpi2c_slave.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_lpi2c_slave_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_mu_transport.K32L2B31A" name="eRPC_mu_transport" brief="eRPC_mu_transport" version="1.11.0" full_name="eRPC MU transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_mu_transport.K32L2B31A" name="eRPC_mu_transport" brief="eRPC_mu_transport" version="1.11.0" full_name="eRPC MU transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_mu_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_mu_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mbf_dynamic.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_mu_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_mu_rtos_transport.K32L2B31A" name="eRPC_mu_rtos_transport" brief="eRPC_mu_rtos_transport" version="1.11.0" full_name="eRPC MU RTOS transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_mu_rtos_transport.K32L2B31A" name="eRPC_mu_rtos_transport" brief="eRPC_mu_rtos_transport" version="1.11.0" full_name="eRPC MU RTOS transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_mu_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_mu_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="c_include">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include">
         <files mask="erpc_threading.h"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="src">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="port" type="src">
         <files mask="erpc_threading_freertos.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mbf_dynamic.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_mu_rtos_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_transport.K32L2B31A" name="eRPC_rpmsg_lite_transport" brief="eRPC_rpmsg_lite_transport" version="1.11.0" full_name="eRPC RPMsg-Lite transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_transport.K32L2B31A" name="eRPC_rpmsg_lite_transport" brief="eRPC_rpmsg_lite_transport" version="1.11.0" full_name="eRPC RPMsg-Lite transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_rpmsg_lite_base_transport.hpp"/>
         <files mask="erpc_rpmsg_lite_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_rpmsg_lite_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_static_queue.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mbf_rpmsg.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_lite_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_transport.K32L2B31A" name="eRPC_rpmsg_lite_rtos_transport" brief="eRPC_rpmsg_lite_rtos_transport" version="1.11.0" full_name="eRPC RPMsg-Lite RTOS transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_transport.K32L2B31A" name="eRPC_rpmsg_lite_rtos_transport" brief="eRPC_rpmsg_lite_rtos_transport" version="1.11.0" full_name="eRPC RPMsg-Lite RTOS transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_rpmsg_lite_base_transport.hpp"/>
         <files mask="erpc_rpmsg_lite_rtos_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_rpmsg_lite_rtos_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mbf_rpmsg.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_lite_rtos_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_tty_rtos_transport.K32L2B31A" name="eRPC_rpmsg_tty_rtos_transport" brief="eRPC_rpmsg_tty_rtos_transport" version="1.11.0" full_name="eRPC RPMsg-Lite TTY RTOS transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_tty_rtos_transport.K32L2B31A" name="eRPC_rpmsg_tty_rtos_transport" brief="eRPC_rpmsg_tty_rtos_transport" version="1.11.0" full_name="eRPC RPMsg-Lite TTY RTOS transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_rpmsg_lite_base_transport.hpp"/>
         <files mask="erpc_rpmsg_tty_rtos_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_rpmsg_tty_rtos_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mbf_rpmsg_tty.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="c_include">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include">
         <files mask="erpc_threading.h"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="src">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="port" type="src">
         <files mask="erpc_threading_freertos.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_framed_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_framed_transport.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_tty_rtos_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_uart_cmsis_transport.K32L2B31A" name="eRPC_uart_cmsis_transport" brief="eRPC_uart_cmsis_transport" version="1.11.0" full_name="eRPC UART CMSIS transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_uart_cmsis_transport.K32L2B31A" name="eRPC_uart_cmsis_transport" brief="eRPC_uart_cmsis_transport" version="1.11.0" full_name="eRPC UART CMSIS transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_uart_cmsis_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_uart_cmsis_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_framed_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_framed_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_uart_cmsis.cpp"/>
         <files mask="erpc_setup_mbf_dynamic.cpp"/>
       </source>
@@ -447,210 +447,210 @@
         <files mask="middleware_multicore_erpc_eRPC_uart_cmsis_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_dspi_master_transport.K32L2B31A" name="eRPC_dspi_master_transport" brief="eRPC_dspi_master_transport" version="1.11.0" full_name="eRPC DSPI master transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_dspi_master_transport.K32L2B31A" name="eRPC_dspi_master_transport" brief="eRPC_dspi_master_transport" version="1.11.0" full_name="eRPC DSPI master transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_dspi_master_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_dspi_master_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_framed_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_framed_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mbf_dynamic.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_dspi_master_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_dspi_slave_transport.K32L2B31A" name="eRPC_dspi_slave_transport" brief="eRPC_dspi_slave_transport" version="1.11.0" full_name="eRPC DSPI slave transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_dspi_slave_transport.K32L2B31A" name="eRPC_dspi_slave_transport" brief="eRPC_dspi_slave_transport" version="1.11.0" full_name="eRPC DSPI slave transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_dspi_slave_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_dspi_slave_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_framed_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_framed_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mbf_dynamic.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_dspi_slave_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_spi_master_transport.K32L2B31A" name="eRPC_spi_master_transport" brief="eRPC_spi_master_transport" version="1.11.0" full_name="eRPC SPI master transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_spi_master_transport.K32L2B31A" name="eRPC_spi_master_transport" brief="eRPC_spi_master_transport" version="1.11.0" full_name="eRPC SPI master transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_spi_master_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_spi_master_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_framed_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_framed_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mbf_dynamic.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_spi_master_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_spi_slave_transport.K32L2B31A" name="eRPC_spi_slave_transport" brief="eRPC_spi_slave_transport" version="1.11.0" full_name="eRPC SPI slave transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_spi_slave_transport.K32L2B31A" name="eRPC_spi_slave_transport" brief="eRPC_spi_slave_transport" version="1.11.0" full_name="eRPC SPI slave transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_spi_slave_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_spi_slave_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_framed_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_framed_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mbf_dynamic.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_spi_slave_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_lpspi_slave_transport.K32L2B31A" name="eRPC_lpspi_slave_transport" brief="eRPC_lpspi_slave_transport" version="1.9.1" full_name="eRPC LPSPI slave transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_lpspi_slave_transport.K32L2B31A" name="eRPC_lpspi_slave_transport" brief="eRPC_lpspi_slave_transport" version="1.9.1" full_name="eRPC LPSPI slave transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_lpspi_slave_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_lpspi_slave_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_framed_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_framed_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mbf_dynamic.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_lpspi_slave_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_i2c_slave_transport.K32L2B31A" name="eRPC_i2c_slave_transport" brief="eRPC_i2c_slave_transport" version="1.11.0" full_name="eRPC I2C slave transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_i2c_slave_transport.K32L2B31A" name="eRPC_i2c_slave_transport" brief="eRPC_i2c_slave_transport" version="1.11.0" full_name="eRPC I2C slave transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_i2c_slave_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_i2c_slave_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_framed_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_framed_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mbf_dynamic.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_i2c_slave_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_lpi2c_slave_transport.K32L2B31A" name="eRPC_lpi2c_slave_transport" brief="eRPC_lpi2c_slave_transport" version="1.9.1" full_name="eRPC LPI2C slave transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_lpi2c_slave_transport.K32L2B31A" name="eRPC_lpi2c_slave_transport" brief="eRPC_lpi2c_slave_transport" version="1.9.1" full_name="eRPC LPI2C slave transport layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="other">
         <files mask="erpc_lpi2c_slave_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="src">
         <files mask="erpc_lpi2c_slave_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="other">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="other">
         <files mask="erpc_framed_transport.hpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="src">
+      <source relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="src">
         <files mask="erpc_framed_transport.cpp"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="setup" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="src">
         <files mask="erpc_setup_mbf_dynamic.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_lpi2c_slave_transport.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
-        <include_path relative_path="../../erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_port_freertos.K32L2B31A" name="eRPC_port_freertos" brief="eRPC_port_freertos" version="1.11.0" full_name="eRPC FreeRTOS port layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_port_freertos.K32L2B31A" name="eRPC_port_freertos" brief="eRPC_port_freertos" version="1.11.0" full_name="eRPC FreeRTOS port layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="c_include">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include">
         <files mask="erpc_port.h"/>
         <files mask="erpc_config_internal.h"/>
         <files mask="erpc_threading.h"/>
         <files mask="erpc_setup_extensions.h"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="src">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="port" type="src">
         <files mask="erpc_port_freertos.cpp"/>
         <files mask="erpc_threading_freertos.cpp"/>
         <files mask="erpc_setup_extensions_freertos.cpp"/>
@@ -659,32 +659,32 @@
         <files mask="middleware_multicore_erpc_eRPC_port_freertos.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_port_stdlib.K32L2B31A" name="eRPC_port_stdlib" brief="eRPC_port_stdlib" version="1.11.0" full_name="eRPC stdlib port layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_port_stdlib.K32L2B31A" name="eRPC_port_stdlib" brief="eRPC_port_stdlib" version="1.11.0" full_name="eRPC stdlib port layer" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="c_include">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include">
         <files mask="erpc_port.h"/>
         <files mask="erpc_config_internal.h"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="src">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="port" type="src">
         <files mask="erpc_port_stdlib.cpp"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
         <files mask="middleware_multicore_erpc_eRPC_port_stdlib.cmake" hidden="true"/>
       </source>
       <include_paths>
-        <include_path relative_path="../../erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
+        <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.doc.K32L2B31A" name="eRPC_port_stdlib" brief="erpc_doc" version="1.11.0" full_name="eRPC doc" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="false" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.doc.K32L2B31A" name="eRPC_port_stdlib" brief="erpc_doc" version="1.11.0" full_name="eRPC doc" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="false" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <component_dependency value="middleware.multicore.erpc.common.K32L2B31A"/>
       </dependencies>
-      <source relative_path="../../erpc/docs" project_relative_path="doc" type="other">
+      <source relative_path="./erpc/docs" project_relative_path="doc" type="other">
         <files mask="erpcgen.md" hidden="true"/>
         <files mask="eRPC-infrastructure.md" hidden="true"/>
         <files mask="erpcsniffer.md" hidden="true"/>
@@ -696,7 +696,7 @@
         <files mask="Getting-Started.md" hidden="true"/>
         <files mask="_Sidebar.md" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/images" project_relative_path="doc" type="image">
+      <source relative_path="./erpc/docs/images" project_relative_path="doc" type="image">
         <files mask="sendingReceivingParameterValue.png" hidden="true"/>
         <files mask="eRPCwith_erpc_server_run_function.png" hidden="true"/>
         <files mask="eRPCusing_erpc_server_poll_function.png" hidden="true"/>
@@ -708,17 +708,17 @@
         <files mask="middleware_multicore_erpc_doc.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.K32L2B31A" name="eRPC" brief="eRPC" version="1.11.0" full_name="Embedded Remote Procedure Call" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path="../middleware/multicore" project_base_path="erpc">
-      <source relative_path="../../erpc" project_relative_path="erpc_aux" type="project">
+    <component id="middleware.multicore.erpc.K32L2B31A" name="eRPC" brief="eRPC" version="1.11.0" full_name="Embedded Remote Procedure Call" devices="K32L2B31xxxxA" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+      <source relative_path="./erpc" project_relative_path="erpc_aux" type="project">
         <files mask=".cproject" hidden="true"/>
         <files mask=".project" hidden="true"/>
       </source>
-      <source relative_path="../../erpc" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc" project_relative_path="erpc_aux" type="other">
         <files mask="Makefile" hidden="true"/>
         <files mask="README.md" hidden="true"/>
         <files mask="LICENSE" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/eRPC" project_relative_path="doc" type="doc">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/eRPC" project_relative_path="doc" type="doc">
         <files mask="annotated.html" hidden="true"/>
         <files mask="class_dynamic_message_buffer_factory-members.html" hidden="true"/>
         <files mask="class_dynamic_message_buffer_factory.html" hidden="true"/>
@@ -1031,7 +1031,7 @@
         <files mask="structerpc_1_1_transport_arbitrator_1_1_pending_client_info.html" hidden="true"/>
         <files mask="tabs.css" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/eRPC" project_relative_path="doc" type="script">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/eRPC" project_relative_path="doc" type="script">
         <files mask="annotated_dup.js" hidden="true"/>
         <files mask="class_dynamic_message_buffer_factory.js" hidden="true"/>
         <files mask="class_r_p_msg_message_buffer_factory.js" hidden="true"/>
@@ -1156,7 +1156,7 @@
         <files mask="struct_l_p_i2_c___c_l_b___u_s_e_r___d_a_t_a.js" hidden="true"/>
         <files mask="structerpc_1_1_transport_arbitrator_1_1_pending_client_info.js" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/eRPC" project_relative_path="doc" type="image">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/eRPC" project_relative_path="doc" type="image">
         <files mask="arrowdown.png" hidden="true"/>
         <files mask="arrowright.png" hidden="true"/>
         <files mask="bc_s.png" hidden="true"/>
@@ -1180,7 +1180,7 @@
         <files mask="tab_h.png" hidden="true"/>
         <files mask="tab_s.png" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/eRPC" project_relative_path="doc" type="other">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/eRPC" project_relative_path="doc" type="other">
         <files mask="class_dynamic_message_buffer_factory__coll__graph.map" hidden="true"/>
         <files mask="class_dynamic_message_buffer_factory__coll__graph.md5" hidden="true"/>
         <files mask="class_dynamic_message_buffer_factory__coll__graph.svg" hidden="true"/>
@@ -1784,7 +1784,7 @@
         <files mask="structerpc_1_1_transport_arbitrator_1_1_pending_client_info__coll__graph.md5" hidden="true"/>
         <files mask="structerpc_1_1_transport_arbitrator_1_1_pending_client_info__coll__graph.svg" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/eRPC/search" project_relative_path="doc" type="doc">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/eRPC/search" project_relative_path="doc" type="doc">
         <files mask="all_0.html" hidden="true"/>
         <files mask="all_1.html" hidden="true"/>
         <files mask="all_10.html" hidden="true"/>
@@ -1867,7 +1867,7 @@
         <files mask="variables_1.html" hidden="true"/>
         <files mask="variables_2.html" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/eRPC/search" project_relative_path="doc" type="script">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/eRPC/search" project_relative_path="doc" type="script">
         <files mask="all_0.js" hidden="true"/>
         <files mask="all_1.js" hidden="true"/>
         <files mask="all_10.js" hidden="true"/>
@@ -1950,14 +1950,14 @@
         <files mask="variables_1.js" hidden="true"/>
         <files mask="variables_2.js" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/eRPC/search" project_relative_path="doc" type="image">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/eRPC/search" project_relative_path="doc" type="image">
         <files mask="close.png" hidden="true"/>
         <files mask="mag_sel.png" hidden="true"/>
         <files mask="search_l.png" hidden="true"/>
         <files mask="search_m.png" hidden="true"/>
         <files mask="search_r.png" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/erpcgen" project_relative_path="doc" type="doc">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/erpcgen" project_relative_path="doc" type="doc">
         <files mask="_alias_type_8hpp_source.html" hidden="true"/>
         <files mask="_annotation_8hpp_source.html" hidden="true"/>
         <files mask="_array_type_8hpp_source.html" hidden="true"/>
@@ -2193,7 +2193,7 @@
         <files mask="structsmart__ptr__free.html" hidden="true"/>
         <files mask="tabs.css" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/erpcgen" project_relative_path="doc" type="script">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/erpcgen" project_relative_path="doc" type="script">
         <files mask="annotated_dup.js" hidden="true"/>
         <files mask="class_float_value.js" hidden="true"/>
         <files mask="class_integer_value.js" hidden="true"/>
@@ -2270,7 +2270,7 @@
         <files mask="resize.js" hidden="true"/>
         <files mask="structerpcgen_1_1token__loc__t.js" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/erpcgen" project_relative_path="doc" type="image">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/erpcgen" project_relative_path="doc" type="image">
         <files mask="arrowdown.png" hidden="true"/>
         <files mask="arrowright.png" hidden="true"/>
         <files mask="bc_s.png" hidden="true"/>
@@ -2335,7 +2335,7 @@
         <files mask="tab_h.png" hidden="true"/>
         <files mask="tab_s.png" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/erpcgen/search" project_relative_path="doc" type="doc">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/erpcgen/search" project_relative_path="doc" type="doc">
         <files mask="all_0.html" hidden="true"/>
         <files mask="all_1.html" hidden="true"/>
         <files mask="all_10.html" hidden="true"/>
@@ -2432,7 +2432,7 @@
         <files mask="variables_2.html" hidden="true"/>
         <files mask="variables_3.html" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/erpcgen/search" project_relative_path="doc" type="script">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/erpcgen/search" project_relative_path="doc" type="script">
         <files mask="all_0.js" hidden="true"/>
         <files mask="all_1.js" hidden="true"/>
         <files mask="all_10.js" hidden="true"/>
@@ -2529,55 +2529,55 @@
         <files mask="variables_2.js" hidden="true"/>
         <files mask="variables_3.js" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure/erpcgen/search" project_relative_path="doc" type="image">
+      <source relative_path="./erpc/docs/eRPC_infrastructure/erpcgen/search" project_relative_path="doc" type="image">
         <files mask="close.png" hidden="true"/>
         <files mask="mag_sel.png" hidden="true"/>
         <files mask="search_l.png" hidden="true"/>
         <files mask="search_m.png" hidden="true"/>
         <files mask="search_r.png" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/docs/eRPC_infrastructure" project_relative_path="doc" type="doc">
+      <source relative_path="./erpc/docs/eRPC_infrastructure" project_relative_path="doc" type="doc">
         <files mask="index.html" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpc_c" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpc_c" project_relative_path="erpc_aux" type="other">
         <files mask="Makefile" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpc_c" project_relative_path="doc" type="doc">
+      <source relative_path="./erpc/erpc_c" project_relative_path="doc" type="doc">
         <files mask="readme.txt" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/config" project_relative_path="erpc_aux" type="c_include">
+      <source relative_path="./erpc/erpc_c/config" project_relative_path="erpc_aux" type="c_include">
         <files mask="erpc_config.h" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="erpc_aux" type="c_include">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="erpc_aux" type="c_include">
         <files mask="erpc_threading.h" hidden="true"/>
         <files mask="erpc_serial.h" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/port" project_relative_path="erpc_aux" type="src">
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="erpc_aux" type="src">
         <files mask="erpc_threading_pthreads.cpp" hidden="true"/>
         <files mask="erpc_serial.cpp" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/setup" project_relative_path="erpc_aux" type="src">
+      <source relative_path="./erpc/erpc_c/setup" project_relative_path="erpc_aux" type="src">
         <files mask="erpc_setup_mbf_static.cpp" hidden="true"/>
         <files mask="erpc_setup_serial.cpp" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="erpc_aux" type="src">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="erpc_aux" type="src">
         <files mask="erpc_inter_thread_buffer_transport.cpp" hidden="true"/>
         <files mask="erpc_serial_transport.cpp" hidden="true"/>
         <files mask="erpc_tcp_transport.cpp" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpc_c/transports" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpc_c/transports" project_relative_path="erpc_aux" type="other">
         <files mask="erpc_inter_thread_buffer_transport.hpp" hidden="true"/>
         <files mask="erpc_serial_transport.hpp" hidden="true"/>
         <files mask="erpc_tcp_transport.hpp" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpc_python" project_relative_path="erpc_aux" type="script">
+      <source relative_path="./erpc/erpc_python" project_relative_path="erpc_aux" type="script">
         <files mask="setup.py" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpc_python" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpc_python" project_relative_path="erpc_aux" type="other">
         <files mask="readme.md" hidden="true"/>
         <files mask="README_Pypi.md" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpc_python/erpc" project_relative_path="erpc_aux" type="script">
+      <source relative_path="./erpc/erpc_python/erpc" project_relative_path="erpc_aux" type="script">
         <files mask="__init__.py" hidden="true"/>
         <files mask="arbitrator.py" hidden="true"/>
         <files mask="basic_codec.py" hidden="true"/>
@@ -2589,25 +2589,25 @@
         <files mask="simple_server.py" hidden="true"/>
         <files mask="transport.py" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpcgen" project_relative_path="erpc_aux" type="other">
         <files mask="Makefile" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen" project_relative_path="erpc_aux" type="doc">
+      <source relative_path="./erpc/erpcgen" project_relative_path="erpc_aux" type="doc">
         <files mask="readme.txt" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/bin" project_relative_path="erpc_aux" type="script">
+      <source relative_path="./erpc/erpcgen/bin" project_relative_path="erpc_aux" type="script">
         <files mask="txt_to_c.py" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/embedded-rpc.xcodeproj" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpcgen/embedded-rpc.xcodeproj" project_relative_path="erpc_aux" type="other">
         <files mask="project.pbxproj" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/embedded-rpc.xcodeproj/project.xcworkspace" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpcgen/embedded-rpc.xcodeproj/project.xcworkspace" project_relative_path="erpc_aux" type="other">
         <files mask="contents.xcworkspacedata" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/src" project_relative_path="erpc_aux" type="c_include">
+      <source relative_path="./erpc/erpcgen/src" project_relative_path="erpc_aux" type="c_include">
         <files mask="annotations.h" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/src" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpcgen/src" project_relative_path="erpc_aux" type="other">
         <files mask="AstNode.hpp" hidden="true"/>
         <files mask="AstWalker.hpp" hidden="true"/>
         <files mask="CGenerator.hpp" hidden="true"/>
@@ -2631,7 +2631,7 @@
         <files mask="erpcgen_lexer.l" hidden="true"/>
         <files mask="erpcgen_parser.y" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/src" project_relative_path="erpc_aux" type="src">
+      <source relative_path="./erpc/erpcgen/src" project_relative_path="erpc_aux" type="src">
         <files mask="AstNode.cpp" hidden="true"/>
         <files mask="AstWalker.cpp" hidden="true"/>
         <files mask="CGenerator.cpp" hidden="true"/>
@@ -2651,17 +2651,17 @@
         <files mask="format_string.cpp" hidden="true"/>
         <files mask="options.cpp" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/src/cpptemplate" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpcgen/src/cpptemplate" project_relative_path="erpc_aux" type="other">
         <files mask="cpptempl.hpp" hidden="true"/>
         <files mask="README.rst" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/src/cpptemplate" project_relative_path="erpc_aux" type="src">
+      <source relative_path="./erpc/erpcgen/src/cpptemplate" project_relative_path="erpc_aux" type="src">
         <files mask="cpptempl.cpp" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/src/cpptemplate" project_relative_path="erpc_aux" type="doc">
+      <source relative_path="./erpc/erpcgen/src/cpptemplate" project_relative_path="erpc_aux" type="doc">
         <files mask="LICENSE.txt" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/src/templates" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpcgen/src/templates" project_relative_path="erpc_aux" type="other">
         <files mask="c_client_source.template" hidden="true"/>
         <files mask="c_coders.template" hidden="true"/>
         <files mask="c_common_functions.template" hidden="true"/>
@@ -2677,7 +2677,7 @@
         <files mask="py_interface.template" hidden="true"/>
         <files mask="py_server.template" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/src/types" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpcgen/src/types" project_relative_path="erpc_aux" type="other">
         <files mask="AliasType.hpp" hidden="true"/>
         <files mask="Annotation.hpp" hidden="true"/>
         <files mask="ArrayType.hpp" hidden="true"/>
@@ -2700,43 +2700,43 @@
         <files mask="UnionType.hpp" hidden="true"/>
         <files mask="VoidType.hpp" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/src/types" project_relative_path="erpc_aux" type="src">
+      <source relative_path="./erpc/erpcgen/src/types" project_relative_path="erpc_aux" type="src">
         <files mask="Type.cpp" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/VisualStudio_v14" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpcgen/VisualStudio_v14" project_relative_path="erpc_aux" type="other">
         <files mask="erpcgen.sln" hidden="true"/>
         <files mask="erpcgen.vcxproj" hidden="true"/>
         <files mask="erpcgen.vcxproj.filters" hidden="true"/>
         <files mask="erpcgen.vcxproj.user" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/VisualStudio_v14" project_relative_path="erpc_aux" type="doc">
+      <source relative_path="./erpc/erpcgen/VisualStudio_v14" project_relative_path="erpc_aux" type="doc">
         <files mask="readme_erpcgen.txt" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/VisualStudio_v14" project_relative_path="erpc_aux" type="src">
+      <source relative_path="./erpc/erpcgen/VisualStudio_v14" project_relative_path="erpc_aux" type="src">
         <files mask="stdafx.cpp" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcgen/VisualStudio_v14" project_relative_path="erpc_aux" type="c_include">
+      <source relative_path="./erpc/erpcgen/VisualStudio_v14" project_relative_path="erpc_aux" type="c_include">
         <files mask="stdafx.h" hidden="true"/>
         <files mask="stdbool.h" hidden="true"/>
         <files mask="targetver.h" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcsniffer" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpcsniffer" project_relative_path="erpc_aux" type="other">
         <files mask="Makefile" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcsniffer" project_relative_path="erpc_aux" type="doc">
+      <source relative_path="./erpc/erpcsniffer" project_relative_path="erpc_aux" type="doc">
         <files mask="readme.txt" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcsniffer/src" project_relative_path="erpc_aux" type="c_include">
+      <source relative_path="./erpc/erpcsniffer/src" project_relative_path="erpc_aux" type="c_include">
         <files mask="erpc_config.h" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcsniffer/src" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/erpcsniffer/src" project_relative_path="erpc_aux" type="other">
         <files mask="Sniffer.hpp" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/erpcsniffer/src" project_relative_path="erpc_aux" type="src">
+      <source relative_path="./erpc/erpcsniffer/src" project_relative_path="erpc_aux" type="src">
         <files mask="Sniffer.cpp" hidden="true"/>
         <files mask="erpcsniffer.cpp" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/mk" project_relative_path="erpc_aux" type="script">
+      <source relative_path="./erpc/mk" project_relative_path="erpc_aux" type="script">
         <files mask="common.mk" hidden="true"/>
         <files mask="erpc_common.mk" hidden="true"/>
         <files mask="flags.mk" hidden="true"/>
@@ -2744,52 +2744,52 @@
         <files mask="subdirs.mk" hidden="true"/>
         <files mask="targets.mk" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/utilities" project_relative_path="erpc_aux" type="doc">
+      <source relative_path="./erpc/utilities" project_relative_path="erpc_aux" type="doc">
         <files mask="README.txt" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/utilities/styles" project_relative_path="erpc_aux" type="doc">
+      <source relative_path="./erpc/utilities/styles" project_relative_path="erpc_aux" type="doc">
         <files mask="README.txt" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/utilities/styles/NOTEPADpp" project_relative_path="erpc_aux" type="xml">
+      <source relative_path="./erpc/utilities/styles/NOTEPADpp" project_relative_path="erpc_aux" type="xml">
         <files mask="IDl_deep_black.xml" hidden="true"/>
         <files mask="IDl_default.xml" hidden="true"/>
         <files mask="template_deep_black.xml" hidden="true"/>
         <files mask="template_default.xml" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/utilities/styles/VSC" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/utilities/styles/VSC" project_relative_path="erpc_aux" type="other">
         <files mask="CHANGELOG.md" hidden="true"/>
         <files mask="README.md" hidden="true"/>
         <files mask="language-configuration.json" hidden="true"/>
         <files mask="package.json" hidden="true"/>
         <files mask="vsc-extension-quickstart.md" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/utilities/styles/VSC/.vscode" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/utilities/styles/VSC/.vscode" project_relative_path="erpc_aux" type="other">
         <files mask="launch.json" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/utilities/styles/VSC/img" project_relative_path="erpc_aux" type="image">
+      <source relative_path="./erpc/utilities/styles/VSC/img" project_relative_path="erpc_aux" type="image">
         <files mask="erpcPic.png" hidden="true"/>
         <files mask="templatePic.png" hidden="true"/>
       </source>
-      <source relative_path="../../erpc/utilities/styles/VSC/syntaxes" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./erpc/utilities/styles/VSC/syntaxes" project_relative_path="erpc_aux" type="other">
         <files mask="erpc.tmLanguage.json" hidden="true"/>
         <files mask="template.tmLanguage.json" hidden="true"/>
       </source>
-      <source relative_path="../../tools/erpcgen/Linux_x64" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./tools/erpcgen/Linux_x64" project_relative_path="erpc_aux" type="other">
         <files mask="erpcgen" hidden="true"/>
       </source>
-      <source relative_path="../../tools/erpcgen/Linux_x86" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./tools/erpcgen/Linux_x86" project_relative_path="erpc_aux" type="other">
         <files mask="erpcgen" hidden="true"/>
       </source>
-      <source relative_path="../../tools/erpcgen/Mac" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./tools/erpcgen/Mac" project_relative_path="erpc_aux" type="other">
         <files mask="erpcgen" hidden="true"/>
       </source>
-      <source relative_path="../../tools/erpcgen/Windows" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./tools/erpcgen/Windows" project_relative_path="erpc_aux" type="other">
         <files mask="erpcgen.exe" hidden="true"/>
       </source>
-      <source relative_path="../../tools/erpcsniffer/Linux_x64" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./tools/erpcsniffer/Linux_x64" project_relative_path="erpc_aux" type="other">
         <files mask="erpcsniffer" hidden="true"/>
       </source>
-      <source relative_path="../../tools/erpcsniffer/Linux_x86" project_relative_path="erpc_aux" type="other">
+      <source relative_path="./tools/erpcsniffer/Linux_x86" project_relative_path="erpc_aux" type="other">
         <files mask="erpcsniffer" hidden="true"/>
       </source>
       <source toolchain="armgcc" relative_path="./" type="workspace">
