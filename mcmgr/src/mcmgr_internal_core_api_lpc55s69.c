@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018-2019 NXP
+ * Copyright (c) 2018-2023 NXP
  * All rights reserved.
  *
  *
@@ -30,6 +30,9 @@ const mcmgr_system_info_t g_mcmgrSystem = {
 
 mcmgr_status_t mcmgr_early_init_internal(mcmgr_core_t coreNum)
 {
+    /* This function is intended to be called as close to the reset entry as possible,
+       (within the startup sequence in SystemInitHook) to allow CoreUp event triggering.
+       Avoid using uninitialized data here. */
     if ((uint32_t)coreNum < g_mcmgrSystem.coreCount)
     {
         MAILBOX_Init(MAILBOX);
