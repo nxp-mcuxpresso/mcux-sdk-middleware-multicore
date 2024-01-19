@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2014-2016, Freescale Semiconductor, Inc.
- * Copyright 2016-2020 NXP
+ * Copyright 2016-2023 NXP
  * All rights reserved.
  *
  *
@@ -48,6 +48,9 @@ const mcmgr_system_info_t g_mcmgrSystem = {
 
 mcmgr_status_t mcmgr_early_init_internal(mcmgr_core_t coreNum)
 {
+    /* This function is intended to be called as close to the reset entry as possible,
+       (within the startup sequence in SystemInitHook) to allow CoreUp event triggering.
+       Avoid using uninitialized data here. */
     switch (coreNum)
     {
         case kMCMGR_Core0:
